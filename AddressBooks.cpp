@@ -2,34 +2,34 @@
 
 struct Person
 {
-	string m_name;//ĞÕÃû
-	string m_sex;//ĞÔ±ğ 1.ÄĞ  2.Å®
-	string m_age;//ÄêÁä
-	string m_phone;//µç»°
+	string m_name;//å§“å
+	string m_sex;//æ€§åˆ«
+	string m_age;//å¹´é¾„
+	string m_phone;//ç”µè¯
 	string m_qq;//QQ
-	string m_eleaddr;//µç×ÓÓÊÏä
-	string m_addr;//×¡Ö·
+	string m_eleaddr;//ç”µå­é‚®ç®±
+	string m_addr;//ä½å€
 };
 struct AddressBooks
 {
 	struct Person personA[MAX];
-	int m_size;//µ±Ç°¸öÊı
+	int m_size;//å½“å‰ä¸ªæ•°
 };
 void menu()
 {
 	printf("***********************\n");
 	printf("***********************\n");
-	printf("*****1¡¢Ìí¼ÓÁªÏµÈË*****\n");
-	printf("*****2¡¢ÏÔÊ¾ÁªÏµÈË*****\n");
-	printf("*****3¡¢²éÕÒÁªÏµÈË*****\n");
-	printf("*****4¡¢É¾³ıÁªÏµÈË*****\n");
-	printf("*****5¡¢ĞŞ¸ÄÁªÏµÈË*****\n");
-	printf("*****6¡¢Çå¿ÕÁªÏµÈË*****\n");
-	printf("*****0¡¢ÍË³öÍ¨Ñ¶Â¼*****\n");
+	printf("*****1ã€æ·»åŠ è”ç³»äºº*****\n");
+	printf("*****2ã€æ˜¾ç¤ºè”ç³»äºº*****\n");
+	printf("*****3ã€æŸ¥æ‰¾è”ç³»äºº*****\n");
+	printf("*****4ã€åˆ é™¤è”ç³»äºº*****\n");
+	printf("*****5ã€ä¿®æ”¹è”ç³»äºº*****\n");
+	printf("*****6ã€æ¸…ç©ºè”ç³»äºº*****\n");
+	printf("*****0ã€é€€å‡ºé€šè®¯å½•*****\n");
 	printf("***********************\n");
 	printf("***********************\n");
 	printf("\n");
-	printf("¾¯¸æ£ºÇë²»ÒªÊäÈë³ıÊı×ÖÍâµÄÈÎºÎ×Ö·û£¡\n");
+	printf("è­¦å‘Šï¼šè¯·ä¸è¦è¾“å…¥é™¤æ•°å­—å¤–çš„ä»»ä½•å­—ç¬¦ï¼\n");
 }
 void addPers(AddressBooks* abs)
 {
@@ -37,47 +37,47 @@ void addPers(AddressBooks* abs)
 	if (abs->m_size != MAX)
 	{
 		string name;
-		printf("ÇëÊäÈëĞÕÃû£º ");
+		printf("è¯·è¾“å…¥å§“åï¼š ");
 		cin >> name;
 		abs->personA[abs->m_size].m_name = name;
-		printf("\nÇëÊäÈëĞÔ±ğ£º ");
+		printf("\nè¯·è¾“å…¥æ€§åˆ«ï¼š ");
 		string sex;
 		while (1)
 	    {
 	    	cin >> sex;
-	    	if (sex == "ÄĞ" || sex == "Å®")
+	    	if (sex == "ç”·" || sex == "å¥³")
 	        {
 		    	abs->personA[abs->m_size].m_sex = sex;
 		    	break;
 	        }
-		    printf("ÊäÈëÓĞÎó£¡ÇëÖØĞÂÊäÈë£¡");
+		    printf("è¾“å…¥æœ‰è¯¯ï¼è¯·é‡æ–°è¾“å…¥ï¼");
 	   	}
-		printf("\nÇëÊäÈëÄêÁä£º ");
+		printf("\nè¯·è¾“å…¥å¹´é¾„ï¼š ");
 		string age;
 		cin >> age;
 		abs->personA[abs->m_size].m_age = age;
-		printf("\nÇëÊäÈëÁªÏµµç»°£º ");
+		printf("\nè¯·è¾“å…¥è”ç³»ç”µè¯ï¼š ");
 		string phone;
 		cin >> phone;
 		abs->personA[abs->m_size].m_phone = phone;
-		printf("\nÇëÊäÈëQQºÅ£º ");
+		printf("\nè¯·è¾“å…¥QQå·ï¼š ");
 		string qq;
 		cin >> qq;
 		abs->personA[abs->m_size].m_qq = qq;
-		printf("\nÇëÊäÈëµç×ÓÓÊÏä£º ");
+		printf("\nè¯·è¾“å…¥ç”µå­é‚®ç®±ï¼š ");
 		string eleaddr;
 		cin >> eleaddr;
 		abs->personA[abs->m_size].m_eleaddr = eleaddr;
-		printf("\nÇëÊäÈë×¡Ö·£º ");
+		printf("\nè¯·è¾“å…¥ä½å€ï¼š ");
 		string addr;
 		cin >> addr;
 		abs->personA[abs->m_size].m_addr = addr;
 		abs->m_size++;
-		printf("\nÌí¼Ó³É¹¦£¡\n ");
+		printf("\næ·»åŠ æˆåŠŸï¼\n ");
 	}
 	else
 	{
-		printf("\nÎŞ·¨Ìí¼Ó£¡Í¨Ñ¶Â¼¿ÉÌí¼ÓÈËÊıÒÑÂú£¡\n");
+		printf("\næ— æ³•æ·»åŠ ï¼é€šè®¯å½•å¯æ·»åŠ äººæ•°å·²æ»¡ï¼\n");
 	}
 	system("pause");
 }
@@ -88,7 +88,7 @@ void showPers(AddressBooks* abs)
 	{
 		for (int i = 0; i < abs->m_size; i++)
 		{
-			printf("%d¡¢ĞÕÃû£º%s  ĞÔ±ğ£º%s  ÄêÁä£º%s  ÁªÏµµç»°£º%s  QQºÅ£º%s  µç×ÓÓÊÏä£º%s  ×¡Ö·£º%s \n"
+			printf("%dã€å§“åï¼š%s  æ€§åˆ«ï¼š%s  å¹´é¾„ï¼š%s  è”ç³»ç”µè¯ï¼š%s  QQå·ï¼š%s  ç”µå­é‚®ç®±ï¼š%s  ä½å€ï¼š%s \n"
 				, i + 1, abs->personA[i].m_name.c_str(), abs->personA[i].m_sex.c_str(), abs->personA[i].m_age.c_str(),
 				abs->personA[i].m_phone.c_str(), abs->personA[i].m_qq.c_str(), abs->personA[i].m_eleaddr.c_str(), 
 				abs->personA[i].m_addr.c_str());
@@ -96,7 +96,7 @@ void showPers(AddressBooks* abs)
 	}
 	else
 	{
-		printf("Ã»ÓĞÁªÏµÈË£¡\n");
+		printf("æ²¡æœ‰è”ç³»äººï¼\n");
 	}
 	system("pause");
 }
@@ -117,19 +117,19 @@ void deletePers(AddressBooks* abs)
 	while (1)
 	{
 		system("cls");
-		printf("ÇëÊäÈëĞèÒªÉ¾³ıµÄÁªÏµÈËµÄĞÕÃû£º");
+		printf("è¯·è¾“å…¥éœ€è¦åˆ é™¤çš„è”ç³»äººçš„å§“åï¼š");
 		string name;
 		cin >> name;
 		int ret = isExist(abs, name);
 		if (ret == -1)
 		{
-			printf("²éÎŞ´ËÈË£¡\n");
+			printf("æŸ¥æ— æ­¤äººï¼\n");
 			system("pause");
 			break;
 		}
 		else
 		{
-			printf("È·¶¨É¾³ı£¿\n£¨Y/N£©");
+			printf("ç¡®å®šåˆ é™¤ï¼Ÿ\nï¼ˆY/Nï¼‰");
 			char select;
 			cin >> select;
 			if (select == 'Y' || select == 'y')
@@ -147,7 +147,7 @@ void deletePers(AddressBooks* abs)
 			}
 			else
 			{
-				printf("ÎŞ·¨Ê¶±ğÖ¸Áî£¡ÇëÖØĞÂÊäÈë£¡\n");
+				printf("æ— æ³•è¯†åˆ«æŒ‡ä»¤ï¼è¯·é‡æ–°è¾“å…¥ï¼\n");
 			}
 		}
 	}
@@ -157,20 +157,20 @@ void findPers(AddressBooks* abs)
 {
 	system("cls");
 	string name;
-	printf("ÇëÊäÈëÁªÏµÈËĞÕÃû£º ");
+	printf("è¯·è¾“å…¥è”ç³»äººå§“åï¼š ");
 	cin >> name;
 	int ret = isExist(abs, name);
 	if (ret != -1)
 	{
-		printf("\nÁªÏµÈË´æÔÚ£¡ÒÔÏÂÎªTAµÄĞÅÏ¢£º \n");
-		printf("\tĞÕÃû£º%s\n  \tĞÔ±ğ£º%s\n  \tÄêÁä£º%s\n  \tÁªÏµµç»°£º%s\n  \tQQºÅ£º%s\n  \tµç×ÓÓÊÏä£º%s\n  \t×¡Ö·£º%s \n\n"
+		printf("\nè”ç³»äººå­˜åœ¨ï¼ä»¥ä¸‹ä¸ºTAçš„ä¿¡æ¯ï¼š \n");
+		printf("\tå§“åï¼š%s\n  \tæ€§åˆ«ï¼š%s\n  \tå¹´é¾„ï¼š%s\n  \tè”ç³»ç”µè¯ï¼š%s\n  \tQQå·ï¼š%s\n  \tç”µå­é‚®ç®±ï¼š%s\n  \tä½å€ï¼š%s \n\n"
 			,abs->personA[ret].m_name.c_str(), abs->personA[ret].m_sex.c_str(), abs->personA[ret].m_age.c_str(),
 			abs->personA[ret].m_phone.c_str(), abs->personA[ret].m_qq.c_str(), abs->personA[ret].m_eleaddr.c_str(),
 			abs->personA[ret].m_addr.c_str());
 	}
 	else
 	{
-		printf("\nÁªÏµÈË²»´æÔÚ£¡");
+		printf("\nè”ç³»äººä¸å­˜åœ¨ï¼");
 	}
 	system("pause");
 }
@@ -178,20 +178,20 @@ void modifyPers(AddressBooks* abs)
 {
 	system("cls");
 	string name;
-	printf("ÇëÊäÈëĞèÒª¸ü¸ÄĞÅÏ¢µÄÈËµÄĞÕÃû£º ");
+	printf("è¯·è¾“å…¥éœ€è¦æ›´æ”¹ä¿¡æ¯çš„äººçš„å§“åï¼š ");
 	cin >> name;
 	int ret = isExist(abs, name);
 	if (ret != -1)
 	{
 		char modify = NULL;
-		printf("ÊÇ·ñĞŞ¸ÄĞÕÃû£¿\n(Y/N)");
+		printf("æ˜¯å¦ä¿®æ”¹å§“åï¼Ÿ\n(Y/N)");
 		while (1)
 		{
 			cin >> modify;
 			if (modify == 'Y' || modify == 'y')
 			{
 				string newname;
-				printf("\nÇëÊäÈëĞÂµÄĞÕÃû£º ");
+				printf("\nè¯·è¾“å…¥æ–°çš„å§“åï¼š ");
 				cin >> newname;
 				abs->personA[ret].m_name = newname;
 				break;
@@ -202,19 +202,19 @@ void modifyPers(AddressBooks* abs)
 			}
 			else
 			{
-				printf("\nÎŞ·¨Ê¶±ğÖ¸Áî£¡ÇëÖØĞÂÊäÈë£¡");
+				printf("\næ— æ³•è¯†åˆ«æŒ‡ä»¤ï¼è¯·é‡æ–°è¾“å…¥ï¼");
 				modify = NULL;
 			}
 		}
 		modify = NULL;
-		printf("\nÊÇ·ñĞŞ¸ÄĞÔ±ğ£¿\n(Y/N)");
+		printf("\næ˜¯å¦ä¿®æ”¹æ€§åˆ«ï¼Ÿ\n(Y/N)");
 		while (1)
 		{
 			cin >> modify;
 			if (modify == 'Y' || modify == 'y')
 			{
 				string newsex;
-				printf("\nÇëÊäÈëĞÂµÄĞÔ±ğ£º ");
+				printf("\nè¯·è¾“å…¥æ–°çš„æ€§åˆ«ï¼š ");
 				cin >> newsex;
 				abs->personA[ret].m_sex = newsex;
 				break;
@@ -225,19 +225,19 @@ void modifyPers(AddressBooks* abs)
 			}
 			else
 			{
-				printf("\nÎŞ·¨Ê¶±ğÖ¸Áî£¡ÇëÖØĞÂÊäÈë£¡");
+				printf("\næ— æ³•è¯†åˆ«æŒ‡ä»¤ï¼è¯·é‡æ–°è¾“å…¥ï¼");
 				modify = NULL;
 			}
 		}
 		modify = NULL;
-		printf("\nÊÇ·ñĞŞ¸ÄÄêÁä£¿\n(Y/N)");
+		printf("\næ˜¯å¦ä¿®æ”¹å¹´é¾„ï¼Ÿ\n(Y/N)");
 		while (1)
 		{
 			cin >> modify;
 			if (modify == 'Y' || modify == 'y')
 			{
 				string newage;
-				printf("\nÇëÊäÈëĞÂµÄÄêÁä£º ");
+				printf("\nè¯·è¾“å…¥æ–°çš„å¹´é¾„ï¼š ");
 				cin >> newage;
 				abs->personA[ret].m_age = newage;
 				break;
@@ -248,19 +248,19 @@ void modifyPers(AddressBooks* abs)
 			}
 			else
 			{
-				printf("\nÎŞ·¨Ê¶±ğÖ¸Áî£¡ÇëÖØĞÂÊäÈë£¡");
+				printf("\næ— æ³•è¯†åˆ«æŒ‡ä»¤ï¼è¯·é‡æ–°è¾“å…¥ï¼");
 				modify = NULL;
 			}
 		}
 		modify = NULL;
-		printf("\nÊÇ·ñĞŞ¸ÄÁªÏµµç»°£¿\n(Y/N)");
+		printf("\næ˜¯å¦ä¿®æ”¹è”ç³»ç”µè¯ï¼Ÿ\n(Y/N)");
 		while (1)
 		{
 			cin >> modify;
 			if (modify == 'Y' || modify == 'y')
 			{
 				string newphone;
-				printf("\nÇëÊäÈëĞÂµÄÁªÏµµç»°£º ");
+				printf("\nè¯·è¾“å…¥æ–°çš„è”ç³»ç”µè¯ï¼š ");
 				cin >> newphone;
 				abs->personA[ret].m_phone = newphone;
 				break;
@@ -271,19 +271,19 @@ void modifyPers(AddressBooks* abs)
 			}
 			else
 			{
-				printf("\nÎŞ·¨Ê¶±ğÖ¸Áî£¡ÇëÖØĞÂÊäÈë£¡");
+				printf("\næ— æ³•è¯†åˆ«æŒ‡ä»¤ï¼è¯·é‡æ–°è¾“å…¥ï¼");
 				modify = NULL;
 			}
 		}
 		modify = NULL;
-		printf("\nÊÇ·ñĞŞ¸ÄQQºÅ£¿\n(Y/N)");
+		printf("\næ˜¯å¦ä¿®æ”¹QQå·ï¼Ÿ\n(Y/N)");
 		while (1)
 		{
 			cin >> modify;
 			if (modify == 'Y' || modify == 'y')
 			{
 				string newqq;
-				printf("\nÇëÊäÈëĞÂµÄQQºÅ£º ");
+				printf("\nè¯·è¾“å…¥æ–°çš„QQå·ï¼š ");
 				cin >> newqq;
 				abs->personA[ret].m_qq = newqq;
 				break;
@@ -294,19 +294,19 @@ void modifyPers(AddressBooks* abs)
 			}
 			else
 			{
-				printf("\nÎŞ·¨Ê¶±ğÖ¸Áî£¡ÇëÖØĞÂÊäÈë£¡");
+				printf("\næ— æ³•è¯†åˆ«æŒ‡ä»¤ï¼è¯·é‡æ–°è¾“å…¥ï¼");
 				modify = NULL;
 			}
 		}
 		modify = NULL;
-		printf("\nÊÇ·ñĞŞ¸Äµç×ÓÓÊÏä£¿\n(Y/N)");
+		printf("\næ˜¯å¦ä¿®æ”¹ç”µå­é‚®ç®±ï¼Ÿ\n(Y/N)");
 		while (1)
 		{
 			cin >> modify;
 			if (modify == 'Y' || modify == 'y')
 			{
 				string neweleaddr;
-				printf("\nÇëÊäÈëĞÂµÄµç×ÓÓÊÏä£º ");
+				printf("\nè¯·è¾“å…¥æ–°çš„ç”µå­é‚®ç®±ï¼š ");
 				cin >> neweleaddr;
 				abs->personA[ret].m_eleaddr = neweleaddr;
 				break;
@@ -317,19 +317,19 @@ void modifyPers(AddressBooks* abs)
 			}
 			else
 			{
-				printf("\nÎŞ·¨Ê¶±ğÖ¸Áî£¡ÇëÖØĞÂÊäÈë£¡");
+				printf("\næ— æ³•è¯†åˆ«æŒ‡ä»¤ï¼è¯·é‡æ–°è¾“å…¥ï¼");
 				modify = NULL;
 			}
 		}
 		modify = NULL;
-		printf("\nÊÇ·ñĞŞ¸Ä×¡Ö·£¿\n(Y/N)");
+		printf("\næ˜¯å¦ä¿®æ”¹ä½å€ï¼Ÿ\n(Y/N)");
 		while (1)
 		{
 			cin >> modify;
 			if (modify == 'Y' || modify == 'y')
 			{
 				string newaddr;
-				printf("\nÇëÊäÈëĞÂµÄ×¡Ö·£º ");
+				printf("\nè¯·è¾“å…¥æ–°çš„ä½å€ï¼š ");
 				cin >> newaddr;
 				abs->personA[ret].m_addr = newaddr;
 				break;
@@ -340,15 +340,15 @@ void modifyPers(AddressBooks* abs)
 			}
 			else
 			{
-				printf("\nÎŞ·¨Ê¶±ğÖ¸Áî£¡ÇëÖØĞÂÊäÈë£¡");
+				printf("\næ— æ³•è¯†åˆ«æŒ‡ä»¤ï¼è¯·é‡æ–°è¾“å…¥ï¼");
 				modify = NULL;
 			}
 		}
-		printf("\nĞŞ¸Ä³É¹¦£¡\n");
+		printf("\nä¿®æ”¹æˆåŠŸï¼\n");
 	}
 	else
 	{
-		printf("²éÎŞ´ËÈË£¡\n");
+		printf("æŸ¥æ— æ­¤äººï¼\n");
 	}
 	system("pause");
 	system("cls");
@@ -357,14 +357,14 @@ void cleanPers(AddressBooks* abs)
 {
 	system("cls");
 	char clean = NULL;
-	printf("È·¶¨É¾³ıËùÓĞÁªÏµÈË£¿\n(Y/N)");
+	printf("ç¡®å®šåˆ é™¤æ‰€æœ‰è”ç³»äººï¼Ÿ\n(Y/N)");
 	while (1)
 	{
 		cin >> clean;
 		if (clean == 'Y' || clean == 'y')
 		{
 			abs->m_size = 0;
-			printf("ÁªÏµÈËÒÑÇå¿Õ£¡\n");
+			printf("è”ç³»äººå·²æ¸…ç©ºï¼\n");
 			break;
 		}
 		else if (clean == 'N' || clean == 'n')
@@ -373,7 +373,7 @@ void cleanPers(AddressBooks* abs)
 		}
 		else
 		{
-			printf("ÎŞ·¨Ê¶±ğÖ¸Áî£¡ÇëÖØĞÂÊäÈë£¡");
+			printf("æ— æ³•è¯†åˆ«æŒ‡ä»¤ï¼è¯·é‡æ–°è¾“å…¥ï¼");
 		}
 	}
 	system("pause");
@@ -424,38 +424,38 @@ int main()
 	readData(&abs);
 	while (1)
 	{
-		//²Ëµ¥
+		//èœå•
 		system("cls");
 		menu();
 		int select = 0;
 		cin >> select;
 		switch (select)
 		{
-		case 1://1¡¢Ìí¼ÓÁªÏµÈË
+		case 1://1ã€æ·»åŠ è”ç³»äºº
 			addPers(&abs);
 			break;	
-		case 2://2¡¢ÏÔÊ¾ÁªÏµÈË
+		case 2://2ã€æ˜¾ç¤ºè”ç³»äºº
 			showPers(&abs);
 			break;	
-		case 3://3¡¢²éÕÒÁªÏµÈË
+		case 3://3ã€æŸ¥æ‰¾è”ç³»äºº
 			findPers(&abs);
 			break;	
-		case 4://4¡¢É¾³ıÁªÏµÈË
+		case 4://4ã€åˆ é™¤è”ç³»äºº
 			deletePers(&abs);
 	    	break;
-		case 5://5¡¢ĞŞ¸ÄÁªÏµÈË
+		case 5://5ã€ä¿®æ”¹è”ç³»äºº
 			modifyPers(&abs);
 			break;	
-		case 6://6¡¢Çå¿ÕÁªÏµÈË
+		case 6://6ã€æ¸…ç©ºè”ç³»äºº
 			cleanPers(&abs);
 			break;	
-		case 0://0¡¢±£´æ²¢ÍË³öÍ¨Ñ¶Â¼
+		case 0://0ã€ä¿å­˜å¹¶é€€å‡ºé€šè®¯å½•
 			saveData(&abs);
 			system("pause");
 			return 0;
 			break;
-		default://ÆäËûÇé¿ö
-			printf("ÎŞ´Ë¹¦ÄÜ£¡\n");
+		default://å…¶ä»–æƒ…å†µ
+			printf("æ— æ­¤åŠŸèƒ½ï¼\n");
 			break;
 		}
 	}
